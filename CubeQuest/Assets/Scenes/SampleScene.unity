@@ -178,9 +178,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01e2f67020beb347ae4c1bbc2f8cf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
-  MAXHP: 200
-  regenrate: 1
+  HP: 0
+  MAXHP: 255
+  regenrate: 0.2
 --- !u!212 &35440517
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -838,9 +838,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01e2f67020beb347ae4c1bbc2f8cf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
-  MAXHP: 200
-  regenrate: 1
+  HP: 0
+  MAXHP: 255
+  regenrate: 0.2
 --- !u!212 &286930805
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1472,9 +1472,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01e2f67020beb347ae4c1bbc2f8cf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
-  MAXHP: 200
-  regenrate: 1
+  HP: 0
+  MAXHP: 255
+  regenrate: 0.2
 --- !u!212 &449460187
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1599,9 +1599,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01e2f67020beb347ae4c1bbc2f8cf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
-  MAXHP: 200
-  regenrate: 1
+  HP: 0
+  MAXHP: 255
+  regenrate: 0.2
 --- !u!212 &458918487
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1966,9 +1966,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01e2f67020beb347ae4c1bbc2f8cf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
-  MAXHP: 200
-  regenrate: 1
+  HP: 0
+  MAXHP: 255
+  regenrate: 0.2
 --- !u!212 &556219686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2525,9 +2525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01e2f67020beb347ae4c1bbc2f8cf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
-  MAXHP: 200
-  regenrate: 1
+  HP: 0
+  MAXHP: 255
+  regenrate: 0.2
 --- !u!212 &647346656
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3829,9 +3829,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01e2f67020beb347ae4c1bbc2f8cf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
-  MAXHP: 200
-  regenrate: 1
+  HP: 0
+  MAXHP: 255
+  regenrate: 0.2
 --- !u!212 &1530632186
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4163,9 +4163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01e2f67020beb347ae4c1bbc2f8cf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
-  MAXHP: 200
-  regenrate: 1
+  HP: 0
+  MAXHP: 255
+  regenrate: 0.2
 --- !u!212 &1628379671
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5592,9 +5592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b01e2f67020beb347ae4c1bbc2f8cf58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 200
-  MAXHP: 200
-  regenrate: 1
+  HP: 0
+  MAXHP: 255
+  regenrate: 0.2
 --- !u!212 &2142254272
 SpriteRenderer:
   m_ObjectHideFlags: 0
