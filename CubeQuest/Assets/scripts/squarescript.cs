@@ -11,7 +11,11 @@ public class squarescript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(isred == true)
+        if (Input.GetKey(KeyCode.E))
+        {
+            isred = true;
+        }
+            if (isred == true)
         {
             GetComponent<SpriteRenderer>().color = new Color(0, 0, 255, 100);
         } else
@@ -19,4 +23,5 @@ public class squarescript : MonoBehaviour {
             GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 100);
         }
 	}
+   
 }
