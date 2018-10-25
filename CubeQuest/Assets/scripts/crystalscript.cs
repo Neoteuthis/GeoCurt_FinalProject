@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class crystalscript : MonoBehaviour {
-    public float HP = 0;
-    public float MAXHP = 255;
-    public float regenrate = 1;
+     float HP = 5;
+    float MAXHP = 255;
+    float regenrate = 1;
     // Use this for initialization
     void Start () {
 
@@ -19,6 +19,13 @@ public class crystalscript : MonoBehaviour {
             HP += regenrate;
         }
         ///update into lerp function!!
-        GetComponent<SpriteRenderer>().color = new Color(255-HP, 0, HP, 100);
+        //GetComponent<SpriteRenderer>().color = new Color(255-HP, 0, HP, 100);
+        if(HP < (MAXHP * 0.5))
+        {
+            GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 100);
+        } else
+        {
+            GetComponent<SpriteRenderer>().color = new Color(255, 0, 255, 100);
+        }
 	}
 }
