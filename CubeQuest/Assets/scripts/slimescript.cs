@@ -32,7 +32,7 @@ public class slimescript : MonoBehaviour
         int spawnNum = maxspawns;
         while (spawnNum >= 0)
         {
-            GameObject slime = objectpooler.SharedInstance.GetPooledObject("Greenslime");
+            GameObject slime = objectpooler.SharedInstance.GetPooledObject("GreenSlime");
             if (slime != null)
             {
                 slime.transform.position =currentpos;
