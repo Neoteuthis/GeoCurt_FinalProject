@@ -7,6 +7,8 @@ public class slimescript : MonoBehaviour
     public int maxspawns = 1;
     public int spawntime = 1200;
     public int maxspawntime = 1200;
+    int HP = 5;
+    int MAXHP = 5;
     Vector3 currentpos;
     // Use this for initialization
     void Start()
@@ -25,6 +27,10 @@ public class slimescript : MonoBehaviour
             spawnNewSlime();
             spawntime = maxspawntime;
         }
+        if(HP<= 0)
+        {
+            gameObject.SetActive(false);
+        }
     }
     //multiply
     public void spawnNewSlime()
@@ -39,6 +45,13 @@ public class slimescript : MonoBehaviour
                 slime.SetActive(true);
             }
             spawnNum--;
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == ("Sword"))
+        {
+            HP--;
         }
     }
 }
