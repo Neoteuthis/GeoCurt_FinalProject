@@ -5,7 +5,7 @@ using UnityEngine;
 public class crystalscript : MonoBehaviour {
      float HP = 5;
     float MAXHP = 255;
-    float regenrate = 1;
+    float regenrate = 0.5f;
     // Use this for initialization
     void Start () {
 
@@ -13,13 +13,17 @@ public class crystalscript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-       
+       //HPfixing
         if (HP < MAXHP) {
             //regenerate hp
             HP += regenrate;
         }
+        if (HP < 0)
+        {
+            HP = 0;
+        }
         ///update into lerp function!!
-        //GetComponent<SpriteRenderer>().color = new Color(255-HP, 0, HP, 100);
+      
         if(HP < (MAXHP * 0.5))
         {
             GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 100);
@@ -33,9 +37,10 @@ public class crystalscript : MonoBehaviour {
 	}
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == ("Sword"))
+        if (collision.gameObject.tag == ("GreenSlime"))
         {
-            HP++;
+            HP-=20;
         }
+
     }
 }

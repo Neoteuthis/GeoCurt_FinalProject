@@ -90,7 +90,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4983013fa843b84892e3f2a4441c547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isroaming: 0
+  isroaming: 1
   isseekingcrystal: 0
   isseekingplayer: 0
   isrunning: 0

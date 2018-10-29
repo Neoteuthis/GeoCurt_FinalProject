@@ -7,6 +7,7 @@ TagManager:
   - GreenSlime
   - Sword
   - Boomerang
+  - crystal
   layers:
   - Default
   - TransparentFX

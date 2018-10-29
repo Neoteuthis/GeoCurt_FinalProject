@@ -7,13 +7,14 @@ public class slimescript : MonoBehaviour
     public int maxspawns = 1;
     public int spawntime = 1200;
     public int maxspawntime = 1200;
+    int spawnvariance = 200;
     int HP = 5;
     int MAXHP = 5;
     Vector3 currentpos;
     // Use this for initialization
     void Start()
     {
-
+        spawntime += Random.Range(-spawnvariance,spawnvariance);
     }
 
     // Update is called once per frame
@@ -36,7 +37,7 @@ public class slimescript : MonoBehaviour
     public void spawnNewSlime()
     {
         int spawnNum = maxspawns;
-        while (spawnNum >= 0)
+        while (spawnNum > 0)
         {
             GameObject slime = objectpooler.SharedInstance.GetPooledObject("GreenSlime");
             if (slime != null)
