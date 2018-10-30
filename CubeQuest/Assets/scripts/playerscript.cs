@@ -6,6 +6,7 @@ public class playerscript : MonoBehaviour {
     //vars
     public int lives; //extras chances
     public int HP; //character health
+    public int MAXHP;
     public int currentitem; //enum? each weapon type can have a number associated with it.
     public float movespeed = 1000f; //speed multiplier applied to unit vector for motion
     public Vector3 currentpos;

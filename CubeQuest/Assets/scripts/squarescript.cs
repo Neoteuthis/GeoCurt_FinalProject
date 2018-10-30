@@ -20,14 +20,15 @@ public class squarescript : MonoBehaviour {
         {
             isred = false;
         }
-        if (Input.GetKey(KeyCode.E))
-        {
-            isred = true;
-        }
-            if (isred == true)
+        //if (Input.GetKey(KeyCode.E))
+        //{
+        //    isred = true;
+        //}
+        if (isred == true && GetComponent<SpriteRenderer>().color != new Color(255, 0, 0, 100))
         {
             GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 100);
-        } else
+        }
+        else if (isred != true && GetComponent<SpriteRenderer>().color != new Color(0, 0, 255, 100))
         {
             GetComponent<SpriteRenderer>().color = new Color(0, 0, 255, 100);
         }
