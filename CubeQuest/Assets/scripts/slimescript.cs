@@ -50,7 +50,7 @@ public class slimescript : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == ("Sword"))
+        if(collision.gameObject.tag == ("Sword")|| collision.gameObject.tag == ("Boomerang"))
         {
             HP--;
         }

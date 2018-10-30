@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class crystalscript : MonoBehaviour {
-     float HP = 5;
-    float MAXHP = 255;
+    public float HP = 5;
+   public float MAXHP = 255;
     float regenrate = 0.5f;
     // Use this for initialization
     void Start () {
@@ -14,7 +14,7 @@ public class crystalscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
        //HPfixing
-        if (HP < MAXHP) {
+        if (HP < (MAXHP-20)) {
             //regenerate hp
             HP += regenrate;
         }
@@ -41,6 +41,9 @@ public class crystalscript : MonoBehaviour {
         {
             HP-=20;
         }
-
+        if (collision.gameObject.tag == ("Rod"))
+        {
+            HP += 20;
+        }
     }
 }

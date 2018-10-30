@@ -12,10 +12,12 @@ public class movescript : MonoBehaviour {
     public int changedir = 50;
     public float xvel = 0;
     public float yvel = 0;
+    GameObject player;
+    public Vector3 currentpos;
+    //GameObject player;
     // Use this for initialization
     void Start() {
     }
-
     // Update is called once per frame
     void Update() {
         var X = gameObject.transform.position;
@@ -58,7 +60,22 @@ public class movescript : MonoBehaviour {
         }
         if (isseekingplayer)
         {
-
+            player = GameObject.FindWithTag("Player");
+            currentpos = gameObject.transform.position;
+            if (player.GetComponent<playerscript>().currentpos.x >= this.currentpos.x){
+                xvel = movespeed;
+            } else
+            {
+                xvel = -movespeed;
+            }
+            if (player.GetComponent<playerscript>().currentpos.y >= this.currentpos.y)
+            {
+                yvel = movespeed;
+            } else
+            {
+                yvel = -movespeed;
+            }
+            GetComponent<Rigidbody2D>().velocity = new Vector2(xvel, yvel);
         }
     }
 }
