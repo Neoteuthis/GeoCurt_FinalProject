@@ -7,6 +7,8 @@ public class playerscript : MonoBehaviour {
     public int lives; //extras chances
     public static float HP = 50; //character health
     public float MAXHP = 50;
+    public static float mana = 50;
+    public float MAXmana = 50;
     public int currentitem; //enum? each weapon type can have a number associated with it.
     public float movespeed = 1000f; //speed multiplier applied to unit vector for motion
     public Vector3 currentpos;
@@ -23,6 +25,10 @@ public class playerscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         rangtime--;
+        if (mana < MAXmana)
+        {
+            mana++;
+        }
         if (startscript.gamestarted && startscript.StateMachine == startscript.gamestate.playing )
         {
             currentpos = gameObject.transform.position;

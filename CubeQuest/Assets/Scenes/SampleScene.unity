@@ -2410,6 +2410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 553764004}
   - component: {fileID: 553764005}
+  - component: {fileID: 553764006}
   m_Layer: 0
   m_Name: swordright
   m_TagString: Untagged
@@ -2476,6 +2477,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &553764006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 553764003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0be5113e66a8e4c9339fc72342466f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &556219682
 GameObject:
   m_ObjectHideFlags: 0
@@ -4632,7 +4644,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1245344034}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.7, y: -1.54, z: -1}
+  m_LocalPosition: {x: 5.7, y: -1.47, z: -1}
   m_LocalScale: {x: 0.1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6086,6 +6098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 3
   MAXHP: 50
+  MAXmana: 50
   currentitem: 0
   movespeed: 2
   currentpos: {x: 0, y: 0, z: 0}
@@ -6119,6 +6132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lives: 0
   MAXHP: 0
+  MAXmana: 50
   currentitem: 0
   movespeed: 1000
   currentpos: {x: 0, y: 0, z: 0}

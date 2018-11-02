@@ -9,8 +9,11 @@ public class barscript : MonoBehaviour {
     float hp;
     float maxhp;
     float hpfrag;
-	// Use this for initialization
-	void Start () {
+    float mp;
+    float maxmp;
+    float mpfrag;
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -20,10 +23,17 @@ public class barscript : MonoBehaviour {
         hp = playerscript.HP;//player.GetComponent<playerscript>().HP;
         maxhp = player.GetComponent<playerscript>().MAXHP;
         hpfrag = hp/maxhp;
+        mp = playerscript.mana;//player.GetComponent<playerscript>().HP;
+        maxmp = player.GetComponent<playerscript>().MAXmana;
+        mpfrag = mp / maxmp;
         if (isHP == true)
         {
             
             transform.localScale = new Vector3(0.1f, hpfrag, 1);
+        } else
+        {
+            transform.localScale = new Vector3(0.1f, mpfrag, 1);
+            GetComponent<SpriteRenderer>().color = new Color(00, 0, 255, 100);
         }
     }
 }

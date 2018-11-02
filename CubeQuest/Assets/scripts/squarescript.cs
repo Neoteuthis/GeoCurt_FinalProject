@@ -6,6 +6,7 @@ public class squarescript : MonoBehaviour {
     public bool isred = true;
     public static int scoremultiplier = 5;
     public GameObject crystal;
+   // GameObject squaremap [9] = new ArrayList[]
     // Use this for initialization
     void Start () {
         
