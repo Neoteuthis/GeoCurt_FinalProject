@@ -6,9 +6,9 @@ public class barscript : MonoBehaviour {
     GameObject player;
     public bool isHP;
     public bool ismana;
-    int hp;
-    int maxhp;
-    int hpfrag;
+    float hp;
+    float maxhp;
+    float hpfrag;
 	// Use this for initialization
 	void Start () {
 		
