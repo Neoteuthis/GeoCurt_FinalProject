@@ -31,7 +31,7 @@ public class slimescript : MonoBehaviour
             }
             if (HP <= 0)
             {
-                playerscript.score += 100;
+                playerscript.score += 100*squarescript.scoremultiplier;
                 gameObject.SetActive(false);
             }
         }

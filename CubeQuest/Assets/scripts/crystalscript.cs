@@ -47,8 +47,11 @@ public class crystalscript : MonoBehaviour {
     {
         if (collision.gameObject.tag == ("GreenSlime"))
         {
-            HP-=20;
+            HP -= 20;
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         if (collision.gameObject.tag == ("Rod"))
         {
             HP += 20;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class squarescript : MonoBehaviour {
     public bool isred = true;
+    public static int scoremultiplier = 5;
     public GameObject crystal;
     // Use this for initialization
     void Start () {
@@ -26,10 +27,12 @@ public class squarescript : MonoBehaviour {
         //}
         if (isred == true && GetComponent<SpriteRenderer>().color != new Color(255, 0, 0, 100))
         {
+            scoremultiplier--;
             GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 100);
         }
         else if (isred != true && GetComponent<SpriteRenderer>().color != new Color(0, 0, 255, 100))
         {
+            scoremultiplier++;
             GetComponent<SpriteRenderer>().color = new Color(0, 0, 255, 100);
         }
 	}
