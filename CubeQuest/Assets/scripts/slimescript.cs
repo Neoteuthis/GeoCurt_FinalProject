@@ -61,7 +61,11 @@ public class slimescript : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-         if (collision.gameObject.tag == ("hitbix"))
+        if (collision.gameObject.tag == ("Sword") || collision.gameObject.tag == ("Boomerang"))
+        {
+            HP--;
+        }
+        if (collision.gameObject.tag == ("hitbix"))
         {
             playerscript.HP--;
         }

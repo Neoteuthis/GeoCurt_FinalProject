@@ -18,18 +18,18 @@ public class swordscript : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Q))
         {
-            GetComponent<Rigidbody2D>().rotation += 5;
-            while (swingdistance >= 0)
-        {
-            GetComponent<Rigidbody2D>().rotation += 5;
-            swingdistance--;
-            if(swingdistance == 0)
-            {
-                GetComponent<Rigidbody2D>().rotation -= 135;
-                swingdistance = 450;
-                return;
-            }
-        }// swing();
+            GetComponent<Rigidbody2D>().rotation -= 10;
+        //    while (swingdistance >= 0)
+        //{
+        //    GetComponent<Rigidbody2D>().rotation += 5;
+        //    swingdistance--;
+        //    if(swingdistance == 0)
+        //    {
+        //        GetComponent<Rigidbody2D>().rotation = 0;
+               
+        //       // return;
+        //    } 
+        //}swingdistance = 450;// swing();
         }
     }
    // void swing()
