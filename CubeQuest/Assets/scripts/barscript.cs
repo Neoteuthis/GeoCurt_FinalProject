@@ -17,7 +17,7 @@ public class barscript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         player = GameObject.FindWithTag("Player");
-        hp = player.GetComponent<playerscript>().HP;
+        hp = playerscript.HP;//player.GetComponent<playerscript>().HP;
         maxhp = player.GetComponent<playerscript>().MAXHP;
         hpfrag = hp/maxhp;
         if (isHP == true)

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class boomerangscript : MonoBehaviour
 {
+    public int spin = 45;
     float xvel = 0;
     float yvel = 0;
     float movespeed = 5;
@@ -19,6 +20,7 @@ public class boomerangscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GetComponent<Rigidbody2D>().rotation += spin;
         tossdistance--;
         lifespan--;
         //update from random to getting player direction
@@ -56,6 +58,7 @@ public class boomerangscript : MonoBehaviour
      GetComponent<Rigidbody2D>().velocity = new Vector2(xvel, yvel);
         if (lifespan<= 0)
         {
+            lifespan = 300;
             gameObject.SetActive(false);
         }
     }

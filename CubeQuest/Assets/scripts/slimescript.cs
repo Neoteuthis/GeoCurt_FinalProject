@@ -20,17 +20,19 @@ public class slimescript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        currentpos = gameObject.transform.position;
-        spawntime--;
-        if(spawntime < 0)
+        if (startscript.gamestarted)
         {
-            spawnNewSlime();
-            spawntime = maxspawntime;
-        }
-        if(HP<= 0)
-        {
-            gameObject.SetActive(false);
+            currentpos = gameObject.transform.position;
+            spawntime--;
+            if (spawntime < 0)
+            {
+                spawnNewSlime();
+                spawntime = maxspawntime;
+            }
+            if (HP <= 0)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
     //multiply
@@ -53,6 +55,14 @@ public class slimescript : MonoBehaviour
         if(collision.gameObject.tag == ("Sword")|| collision.gameObject.tag == ("Boomerang"))
         {
             HP--;
+        }
+       
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+         if (collision.gameObject.tag == ("hitbix"))
+        {
+            playerscript.HP--;
         }
     }
 }

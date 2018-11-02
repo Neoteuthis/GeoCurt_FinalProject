@@ -10,31 +10,38 @@ public class crystalscript : MonoBehaviour {
     void Start () {
 
         }
-	
-	// Update is called once per frame
-	void Update () {
-       //HPfixing
-        if (HP < (MAXHP-20)) {
-            //regenerate hp
-            HP += regenrate;
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (startscript.gamestarted)
+        {
+            //HPfixing
+            if (HP < (MAXHP - 20))
+            {
+                //regenerate hp
+                HP += regenrate;
+            }
+            if (HP < 0)
+            {
+                HP = 0;
+            }
+            ///update into lerp function!!
+
+            if (HP < (MAXHP * 0.5))
+            {
+                GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 100);
+            }
+            else if (HP < MAXHP)
+            {
+                GetComponent<SpriteRenderer>().color = new Color(255, 0, 255, 100);
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().color = new Color(0, 0, 255, 100);
+            }
         }
-        if (HP < 0)
-        {
-            HP = 0;
-        }
-        ///update into lerp function!!
-      
-        if(HP < (MAXHP * 0.5))
-        {
-            GetComponent<SpriteRenderer>().color = new Color(255, 0, 0, 100);
-        } else if(HP < MAXHP) 
-        {
-            GetComponent<SpriteRenderer>().color = new Color(255, 0, 255, 100);
-        } else
-        {
-            GetComponent<SpriteRenderer>().color = new Color(0, 0, 255, 100);
-        }
-	}
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == ("GreenSlime"))
