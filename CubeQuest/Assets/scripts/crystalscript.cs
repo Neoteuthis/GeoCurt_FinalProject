@@ -17,7 +17,7 @@ public class crystalscript : MonoBehaviour {
         if (startscript.gamestarted)
         {
             //HPfixing
-            if (HP < (MAXHP - 20))
+            if (HP < (MAXHP - 10))
             {
                 //regenerate hp
                 HP += regenrate;
@@ -39,6 +39,7 @@ public class crystalscript : MonoBehaviour {
             else
             {
                 GetComponent<SpriteRenderer>().color = new Color(0, 0, 255, 100);
+                HP = MAXHP;
             }
         }
     }

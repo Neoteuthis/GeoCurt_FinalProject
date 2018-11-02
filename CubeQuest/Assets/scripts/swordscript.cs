@@ -6,7 +6,7 @@ public class swordscript : MonoBehaviour
 {
     public bool isSword;
     public bool isWand;
-    public float swingdistance = 45;
+    public float swingdistance = 450;
     // Use this for initialization
     void Start()
     {
@@ -16,23 +16,24 @@ public class swordscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.Q))
         {
-            swing();
-        }
-    }
-    void swing()
-    {
-        while (swingdistance >= 0)
+            GetComponent<Rigidbody2D>().rotation += 5;
+            while (swingdistance >= 0)
         {
             GetComponent<Rigidbody2D>().rotation += 5;
             swingdistance--;
             if(swingdistance == 0)
             {
                 GetComponent<Rigidbody2D>().rotation -= 135;
-                swingdistance = 45;
+                swingdistance = 450;
                 return;
             }
-        } 
+        }// swing();
+        }
     }
+   // void swing()
+   // {
+   //     
+  //  }
 }

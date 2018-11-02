@@ -20,7 +20,7 @@ public class slimescript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (startscript.gamestarted)
+        if (startscript.gamestarted && startscript.StateMachine == startscript.gamestate.playing)
         {
             currentpos = gameObject.transform.position;
             spawntime--;
@@ -31,6 +31,7 @@ public class slimescript : MonoBehaviour
             }
             if (HP <= 0)
             {
+                playerscript.score += 100;
                 gameObject.SetActive(false);
             }
         }

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class playerscript : MonoBehaviour {
     //vars
     public int lives; //extras chances
@@ -12,15 +12,18 @@ public class playerscript : MonoBehaviour {
     public Vector3 currentpos;
     public float rangtime;
     public float maxrangtime = 60;
+    int countdown = 500;
+    public static int score = 0;
+    public static int highscore = 0;
 	// Use this for initialization
 	void Start () {
-		
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update () {
         rangtime--;
-        if (startscript.gamestarted)
+        if (startscript.gamestarted && startscript.StateMachine == startscript.gamestate.playing )
         {
             currentpos = gameObject.transform.position;
             //movement code
@@ -49,5 +52,23 @@ public class playerscript : MonoBehaviour {
                 }
             }
         }
+        if (HP <= 0) {
+            startscript.StateMachine = startscript.gamestate.dead;
+          
+            countdown--;
+            if(countdown <= 0)
+            {
+                countdown = 500;
+                HP = MAXHP;
+                if (score > highscore)
+                {
+                    highscore = score;
+                }
+                score = 0;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                startscript.StateMachine = startscript.gamestate.mainmenu;
+            }
+        }
+
     }
 }

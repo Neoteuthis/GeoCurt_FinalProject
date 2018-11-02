@@ -23,7 +23,7 @@ public class movescript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (startscript.gamestarted)
+        if (startscript.gamestarted && startscript.StateMachine == startscript.gamestate.playing)
         {
             var X = gameObject.transform.position;
             //gameObject.transform.Translate(Random.Range(-0.1f,0.1f), Random.Range(-0.1f, 0.1f),0);
