@@ -7,9 +7,9 @@ public class slimescript : MonoBehaviour
     public int maxspawns = 1;
     public int spawntime = 1200;
     public int maxspawntime = 1200;
-   public int spawnvariance = 200;
-   public int HP = 5;
-   public int MAXHP = 5;
+    public int spawnvariance = 200;
+    public int HP = 5;
+    public int MAXHP = 5;
     Vector3 currentpos;
     // Use this for initialization
     void Start()

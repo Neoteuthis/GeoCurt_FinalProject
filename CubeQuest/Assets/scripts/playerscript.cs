@@ -44,7 +44,9 @@ public class playerscript : MonoBehaviour {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(0, UD * movespeed);
             }
             if (Input.GetKeyUp(KeyCode.D) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.W))
+            {
                 GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            }
             if (Input.GetKey(KeyCode.E))
             {
                 if (rangtime <= 0) { 
